@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <transition-group mode="out-in">
-      <Header key="header" />
+    <Header key="header" />
+    <transition mode="out-in" appear>
       <router-view key="content" />
-    </transition-group>
+    </transition>
   </div>
 </template>
 
@@ -58,8 +58,12 @@ a:hover {
   color: #fc9c72;
 }
 
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s;
+}
 .v-enter,
-.v-leave {
-  transition: all ease 1s;
+.v-leave-to {
+  opacity: 0;
 }
 </style>

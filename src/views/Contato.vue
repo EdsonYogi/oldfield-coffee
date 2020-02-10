@@ -4,7 +4,9 @@
       <div class="conteudo">
         <h1 class="titulo">Contato</h1>
         <div class="row">
-          <img class="mapa col-md-6" src="../assets/Contato/Mapa.jpg" alt="Contato" />
+          <a class="col-md-6" href="https://www.google.com/maps">
+            <img class="mapa" src="../assets/Contato/Mapa.jpg" alt="Contato" />
+          </a>
           <div class="col-md-6">
             <div>
               <h1 class="mt-0">Horário de Funcionamento</h1>
@@ -17,19 +19,23 @@
               <h1>Fale Conosco</h1>
               <ul>
                 <li>
-                  <font-awesome-icon class="icon-contato" icon="phone" />(11) 0000-0000 / (11) 9999-9999
+                  <font-awesome-icon class="icon-contato" icon="phone" />
+                  <a href="tel:(11) 0000-0000">(11) 0000-0000</a> /
+                  <a href="tel:(11) 0000-0000">(11) 9999-9999</a>
                 </li>
                 <li>
-                  <font-awesome-icon class="icon-contato" icon="envelope" />contato@oldfieldcoffee.com.br
+                  <font-awesome-icon class="icon-contato" icon="envelope" />
+                  <a href="mailto:contato@oldfieldcoffee.com.br">contato@oldfieldcoffee.com.br</a>
                 </li>
               </ul>
             </div>
             <div>
               <h1>Onde estamos</h1>
-              <span>
-                <font-awesome-icon class="icon-contato" icon="map-marked-alt" />Av. da Pasulista, 0000, Centro
+              <font-awesome-icon class="icon-contato" icon="map-marked-alt" />
+              <a class="endereco" href="https://www.google.com/maps">
+                Av. da Pasulista, 0000, Centro
                 <br />São Paulo - SP
-              </span>
+              </a>
             </div>
             <div>
               <h1>Redes Sociais</h1>
@@ -65,6 +71,18 @@ export default {
 </script>
 
 <style scoped>
+a,
+span,
+li,
+svg {
+  font-size: 25px;
+  color: #4d4845;
+}
+
+a:hover {
+  color: white;
+}
+
 .contato {
   padding: 100px 0;
 }
@@ -84,7 +102,6 @@ export default {
 
 .contato .conteudo {
   background-color: #fc9c72;
-  color: white;
   padding: 50px;
 }
 
@@ -96,12 +113,6 @@ export default {
   margin-bottom: 20px;
 }
 
-.contato li,
-.contato span {
-  font-size: 1.25em;
-  color: #4d4845;
-}
-
 .contato svg {
   margin-right: 10px;
 }
@@ -111,11 +122,6 @@ export default {
   height: 60px;
   margin-right: 20px;
   transition-duration: 0.5s;
-}
-
-.rede-social img:hover {
-  width: 65px;
-  height: 65px;
 }
 
 @media only screen and (max-width: 768px) {

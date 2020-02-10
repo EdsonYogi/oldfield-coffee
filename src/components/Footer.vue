@@ -2,32 +2,35 @@
   <section class="footer">
     <div class="container">
       <div class="comp-contato row">
-        <div class="col-md-6 my-3">
-          <h1>Horário de Funcionamento</h1>
+        <div class="col-md-auto col-12 my-3">
+          <h1>Funcionamento</h1>
           <ul>
             <li>De Segunda á Domingo e Feriados</li>
             <li>Das 06:00 ás 23:00</li>
           </ul>
         </div>
-        <div class="col-md-6 my-3">
+        <div class="col-md-auto col-12 my-3">
           <h1>Fale Conosco</h1>
           <ul>
             <li>
-              <font-awesome-icon class="icon-contato" icon="phone" />(11) 0000-0000 / (11) 9999-9999
+              <font-awesome-icon class="icon-contato" icon="phone" />
+              <a href="tel:(11) 0000-0000">(11) 0000-0000</a> /
+              <a href="tel:(11) 0000-0000">(11) 9999-9999</a>
             </li>
             <li>
-              <font-awesome-icon class="icon-contato" icon="envelope" />contato@oldfieldcoffee.com.br
+              <font-awesome-icon class="icon-contato" icon="envelope" />
+              <a href="mailto:contato@oldfieldcoffee.com.br">contato@oldfieldcoffee.com.br</a>
             </li>
           </ul>
         </div>
-        <div class="col-md-6 my-3">
+        <div class="col-md-auto col-12 my-3">
           <h1>Onde estamos</h1>
-          <span>
+          <a class="endereco" href="https://www.google.com/maps">
             <font-awesome-icon class="icon-contato" icon="map-marked-alt" />Av. da Pasulista, 0000, Centro
             <br />São Paulo - SP
-          </span>
+          </a>
         </div>
-        <div class="col-md-6 my-3">
+        <div class="col-md-auto col-12 my-3">
           <h1>Redes Sociais</h1>
           <ul class="row no-gutters">
             <li>
@@ -63,6 +66,14 @@ export default {
   color: white;
 }
 
+a {
+  color: white;
+}
+
+a:hover {
+  color: #fc9c72;
+}
+
 .footer h1 {
   font-size: 1.5em;
   text-transform: uppercase;
@@ -76,8 +87,8 @@ export default {
 
 .rede-social {
   display: block;
-  width: 65px;
-  height: 65px;
+  width: 60px;
+  height: 60px;
   margin-right: 20px;
   cursor: pointer;
 }
@@ -88,13 +99,8 @@ export default {
   transition-duration: 0.5s;
 }
 
-.rede-social img:hover {
-  width: 65px;
-  height: 65px;
-}
-
 .comp-contato {
-  justify-content: center;
-  margin: 100px 0;
+  justify-content: space-between;
+  margin: 50px 0;
 }
 </style>

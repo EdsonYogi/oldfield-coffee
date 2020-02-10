@@ -5,27 +5,29 @@
       :style="{backgroundImage: `url(${imagens[imagem]})`, height: `${altura}px`}"
     ></div>
     <ul class="itens">
-      <li class="item" :class="{ativo: imagem == 0}" @click="onSlide(0)"></li>
-      <li class="item" :class="{ativo: imagem == 1}" @click="onSlide(1)"></li>
-      <li class="item" :class="{ativo: imagem == 2}" @click="onSlide(2)"></li>
-      <li class="item" :class="{ativo: imagem == 3}" @click="onSlide(3)"></li>
-      <li class="item" :class="{ativo: imagem == 4}" @click="onSlide(4)"></li>
+      <li
+        class="item"
+        v-for="(img, index) in imagens"
+        :class="{ativo: imagem == index}"
+        @click="onSlide(index)"
+        :key="index"
+      ></li>
     </ul>
   </div>
 </template>
 
 <script>
+import img1 from "../assets/slide/01.jpg";
+import img2 from "../assets/slide/02.jpg";
+import img3 from "../assets/slide/03.jpg";
+import img4 from "../assets/slide/04.jpg";
+import img5 from "../assets/slide/05.jpg";
+
 export default {
   name: "Slide",
   data() {
     return {
-      imagens: [
-        require("../assets/slide/01.jpg"),
-        require("../assets/slide/02.jpg"),
-        require("../assets/slide/03.jpg"),
-        require("../assets/slide/04.jpg"),
-        require("../assets/slide/05.jpg")
-      ],
+      imagens: [img1, img2, img3, img4, img5],
       imagem: 0,
       animar: false,
       timer: "",
