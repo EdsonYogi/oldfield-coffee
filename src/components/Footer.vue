@@ -25,7 +25,7 @@
         </div>
         <div class="col-md-auto col-12 my-3">
           <h1>Onde estamos</h1>
-          <a class="endereco" href="https://www.google.com/maps">
+          <a class="endereco" href="https://www.google.com/maps" target="_blank">
             <font-awesome-icon class="icon-contato" icon="map-marked-alt" />Av. da Pasulista, 0000, Centro
             <br />São Paulo - SP
           </a>
